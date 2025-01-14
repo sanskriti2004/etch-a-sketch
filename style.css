@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh;
+  margin: 1rem 3rem 0 3rem;
+  gap: 4rem;
+}
+
+.utils {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  gap: 1rem;
+}
+
+#main-grid {
+  width: 550px;
+  height: 550px;
+  background-color: aquamarine;
+  box-shadow: 0 4px 12px rgba(55, 55, 55, 0.534);
+}
+
+button {
+  border: 1px solid rgba(0, 0, 0, 0.354);
+  width: 12rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.354);
+  color: white;
+  transition: 0.5s background-color ease;
+}
+#color-picker {
+  margin-bottom: 1rem;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(55, 55, 55, 0.769);
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.196);
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.196);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgb(53, 52, 52);
+  cursor: pointer;
+}

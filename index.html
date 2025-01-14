@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./src/icon.png" />
     <title>Etch-a-Sketch</title>
   </head>
   <body>
+    <header>Etch-a-Sketch</header>
+    <main>
+      <div class="utils">
+        <input type="color" id="color-picker" />
+        <button>Draw</button>
+        <button>Erase</button>
+        <button>Clear</button>
+        <span>64 × 64</span>
+        <input type="range" id="grid-size" min="1" max="100" value="16" />
+      </div>
+      <div id="main-grid"></div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
