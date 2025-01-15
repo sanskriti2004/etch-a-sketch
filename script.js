@@ -7,20 +7,9 @@ const gridSize = document.querySelector(".grid-size");
 const mainCanvas = document.querySelector("#main-grid");
 
 gridSize.addEventListener("input", () => {
-  gridSizeText.textContent = gridSize.value + " × " + gridSize.value;
+  gridSizeText.textContent = gridSize.value + " × " + gridSize.value * 2;
   createGrid(gridSize.value);
 });
-
-// function draw(gridSize) {
-//   const gridContainer = document.getElementById("grid-container");
-//   const gridSizeInput = document.getElementById("grid-size");
-//   const generateGridButton = document.getElementById("generate-grid");
-
-//   generateGridButton.addEventListener("click", () => {
-//     const gridSize = parseInt(gridSizeInput.value);
-
-//     createGrid(gridSize);
-//   });
 
 function createGrid(size) {
   // Clear existing grid
@@ -28,7 +17,7 @@ function createGrid(size) {
 
   // Set grid dimensions
   mainCanvas.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-  mainCanvas.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  mainCanvas.style.gridTemplateColumns = `repeat(${size * 2}, 1fr)`;
   const cellSize = Math.min(500 / size, 20); // Adjust cell size if needed (max 20px)
 
   // Generate grid cells
