@@ -5,9 +5,32 @@ const eraseBtn = document.querySelector("#erase-btn");
 const gridSizeText = document.querySelector(".grid-size-text");
 const gridSize = document.querySelector(".grid-size");
 const mainCanvas = document.querySelector("#main-grid");
-
+const isDrawing = true;
+const isErasing = false;
 gridSize.addEventListener("input", () => {
   gridSizeText.textContent = gridSize.value + " × " + gridSize.value * 2;
+  createGrid(gridSize.value);
+});
+
+drawBtn.addEventListener("click", () => {
+  drawBtn.style.backgroundColor = "rgba(0, 0, 0, 0.354)";
+  drawBtn.style.color = "rgb(255, 255, 255)";
+  eraseBtn.style.backgroundColor = "rgb(255, 255, 255)";
+  eraseBtn.style.color = "rgb(0, 0, 0)";
+  isDrawing = true;
+  isErasing = false;
+});
+eraseBtn.addEventListener("click", () => {
+  eraseBtn.style.backgroundColor = "rgba(0, 0, 0, 0.354)";
+  eraseBtn.style.color = "rgb(255, 255, 255)";
+  drawBtn.style.backgroundColor = "rgb(255, 255, 255)";
+  drawBtn.style.color = "rgb(0, 0, 0)";
+  isDrawing = false;
+  isErasing = true;
+});
+clearBtn.addEventListener("click", () => {
+  isDrawing = true;
+  isErasing = false;
   createGrid(gridSize.value);
 });
 
