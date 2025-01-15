@@ -21,7 +21,7 @@ body {
   justify-content: center;
   background-color: darkred;
   height: 90vh;
-  width: 90vw;
+  width: 85vw;
   border-radius: 3rem;
   gap: 1rem;
   color: rgb(240, 238, 195);
@@ -43,7 +43,7 @@ h1 {
 #main-grid {
   width: 900px;
   height: 450px;
-  box-shadow: 0 4px 12px inset rgba(55, 55, 55, 0.534);
+  box-shadow: 0 6px 8px inset rgba(55, 55, 55, 0.534);
   background-color: white;
   display: grid;
   grid-template-columns: repeat(64, 1fr);
